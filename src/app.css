@@ -77,7 +77,56 @@
     font-size: 1.2rem;
   }
   
-  a.chapter-link:hover {
-    background-color: #e0e0e0;
-  }
-  
+a.atitle:link {
+		text-decoration: none;
+		color: #004db2;
+		font-size:  4em;
+}
+a.atitle:visited {
+		text-decoration: none;
+		color: #004db2;
+}
+a.atitle:hover {
+		text-decoration: underline;
+}
+a.atitle:active {
+		text-decoration: underline;
+}
+
+a.aauthors:link {
+  text-decoration: none;
+  color: #ffcd6f;
+  font-size: 2.66em;
+}
+a.aauthors:visited {
+  text-decoration: none;
+  color: #ffcd6f;
+}
+a.aauthors:hover {
+  text-decoration: underline;
+}
+a.aauthors:active {
+  text-decoration: underline;
+}
+.tagline {
+	text-align: center;
+	font-size: 2em;
+}
+
+.writing {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+p.writing { 
+  text-indent: 2em;
+  margin:  20px 0;
+  display: inline-block;
+  width: 50ch;
+}
+
+.essay p::after{
+  content: "";
+  display: block;
+}
