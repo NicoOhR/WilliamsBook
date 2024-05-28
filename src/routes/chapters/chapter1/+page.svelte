@@ -1,5 +1,6 @@
-<script>
-    import { math, display } from 'mathlifier';
+<script lang="ts">
+  import { useMathJax } from '$lib/mathjax';
+  useMathJax();
 </script>
 
 <head>
@@ -21,11 +22,12 @@
           <div class="tagline"><i>"What if a distributive lattice weren't a lattice?"</i></div>
 	
 
-    <div class="writing">
+    <div class="row">
+      <div class="column left">
         <p>
-            Let {@html math('G')} be a finite acyclic directed graph. The transitive closure of {@html math('G')} defines a 
+            Let $G$ be a finite acyclic directed graph. The transitive closure of $G$ defines a 
             <span class="tooltip">poset
-                <span class="tooltiptext">Which we call {@html math('G')}-order</span>
+                <span class="tooltiptext">Which we call $G$-order</span>
             </span>.
-            An <span style="color:#004db2"><i>independent set</i></span> {@html math('I \\subseteq G')} is a set of pairwise non-adjacent vertices of {@html math('G')}.</div>
+            An <span style="color:#004db2"><i>independent set</i></span> $I \subseteq G$ is a set of pairwise non-adjacent vertices of $G$.
 </main>
