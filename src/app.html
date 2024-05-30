@@ -10,22 +10,18 @@
         integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0"
         crossorigin="anonymous"
     />
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            },
-            TeX: {
-                extensions: ["AMSmath.js", "AMSsymbols.js", "tex2jax.js"],
-                Macros: {
-                    mathcal: ["{\\mathcal #1}", 1]
-                }
-            }
-        });
-    </script>
-    <script type="text/javascript" async
+    <script>
+        MathJax = {
+          tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+        };
+        </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+            <script type="text/javascript" async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
     </script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>  
     %sveltekit.head%
 </head>
 <body data-sveltekit-preload-data="hover">

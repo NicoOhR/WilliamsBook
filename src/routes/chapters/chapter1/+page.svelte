@@ -1,6 +1,7 @@
 <script lang="ts">
   import { useMathJax } from '$lib/mathjax';
   useMathJax();
+  
 </script>
 
 <head>
@@ -25,9 +26,11 @@
     <div class="row">
       <div class="column left">
         <p>
-            Let $G$ be a finite acyclic directed graph. The transitive closure of $G$ defines a 
+            Let $$G$$ be a finite acyclic directed graph. The transitive closure of $G$ defines a 
             <span class="tooltip">poset
                 <span class="tooltiptext">Which we call $G$-order</span>
             </span>.
             An <span style="color:#004db2"><i>independent set</i></span> $I \subseteq G$ is a set of pairwise non-adjacent vertices of $G$.
+            A pair (<span style="color:#004db2">$D$</span>,<span style="color:#ffcd6f">$U$</span>) of independent sets of $G$ is called <span style="color:#004db2"><i>orthogonal</i></span> if there is no edge in $G$ from an element of $\D$ to an element of $\U$.  An orthogonal pair of independent sets $(\D,\U)$ is called <span style="color:#004db2"><i>tight</i></span> if whenever any element of $\D$ is <div class="tooltip">increased<span class="tooltiptext">removed and replaced by a larger element with respect to $G$-order</span></div> or any element of $\U$ is <div class="tooltip">decreased<span class="tooltiptext">removed and replaced by a smaller element with respect to $G$-order</span></div>, or a new element is added to either $\D$ or $\U$, then the result is no longer an orthogonal pair of independent sets.
+       
 </main>
