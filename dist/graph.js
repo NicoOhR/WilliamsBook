@@ -23,7 +23,18 @@ const linkElements = svg.selectAll('line')
     .attr('y1', d => nodes[d.source - 1].y)
     .attr('x2', d => nodes[d.target - 1].x)
     .attr('y2', d => nodes[d.target - 1].y)
-    .attr('stroke', 'black');
+    .attr('stroke', 'black')
+    .attr('id', d => `link-${d.source}-${d.target}`);
+// Function to print link IDs connected to a node
+function printLinkIDsForNode(node) {
+    node.links.forEach(link => {
+        const linkID = `link-${link.source}-${link.target}`;
+        console.log(linkID);
+    });
+}
+// Example usage
+const exampleNode = nodes[0]; // Node with id 1
+printLinkIDsForNode(exampleNode);
 const nodeElements = svg.selectAll('circle')
     .data(nodes)
     .enter().append('circle')
@@ -38,8 +49,12 @@ const nodeElements = svg.selectAll('circle')
     const newIndex = (currentIndex + 1) % colors.length;
     d.color = colors[newIndex];
     d3.select(this).attr('fill', d.color);
+    printLinkIDsForNode(d);
+    console.log("click");
     //checkColorValidity(d.id);
 });
+function checkColorValidity(nodeId) {
+}
 /*
 function checkColorValidity(nodeId: number) {
 // Find the selected node by its id
